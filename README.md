@@ -9,7 +9,8 @@ You need Docker installed on your system.
 Getting Started
 
 Directory Structure:
-'''
+
+---
 docker_ros/
 ├── .DS_Store
 ├── Dockerfile
@@ -22,7 +23,7 @@ docker_ros/
 │   ├── mavros.sh
 │   └── ros_noetic.sh
 └── (Other potential files or directories not shown in images)
-'''
+---
 
 Clone the repository:
 git clone https://github.com/your-username/docker_ros.git
