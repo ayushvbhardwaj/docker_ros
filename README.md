@@ -25,16 +25,16 @@ docker_ros/
 └── (Other potential files or directories not shown in images)
 ---
 
-Clone the repository:
-git clone https://github.com/your-username/docker_ros.git
-cd docker_ros
+##Clone the repository:
+##git clone https://github.com/your-username/docker_ros.git
+##cd docker_ros
 (Replace your-username with the correct username.)
 
-Build the Docker image:
-docker build -t ros_docker .
+##Build the Docker image:
+##docker build -t ros_docker .
 
-Run a ROS container:
-docker run -it ros_docker bash
+##Run a ROS container:
+##docker run -it ros_docker bash
 
 Usage
 
