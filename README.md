@@ -1,47 +1,52 @@
- docker_ros_gazebo
+#docker_ros
 
-A Dockerized development environment for **ROS Noetic**, **ArduPilot**, **MAVROS**, and **Gazebo**.  
-Ideal for autonomous drone simulation, SITL testing, MAVLink communication, and robotics R&D — all containerized for easy reproducibility and deployment.
+This repository helps you set up a ROS (Robot Operating System) environment using Docker. It provides a Dockerfile to create an isolated and consistent ROS development environment.
 
----
+Prerequisites
 
-## 🚀 Features
+You need Docker installed on your system.
 
-- ✅ ROS Noetic (Ubuntu 20.04)
-- ✅ ArduPilot SITL (v4.0.4+)
-- ✅ MAVROS & MAVLink protocol support
-- ✅ Gazebo 9 with IQ_Sim integration
-- ✅ Pre-configured Catkin workspace
-- ✅ Docker-based: isolated, reproducible, and fast
+Getting Started
 
----
+Directory Structure:
+docker_ros/
+├── .DS_Store
+├── Dockerfile
+├── README.md
+├── install/
+│   ├── ardubard.sh
+│   ├── base_setup.sh
+│   ├── geographiclib.sh
+│   ├── iq_sim.sh
+│   ├── mavros.sh
+│   └── ros_noetic.sh
+└── (Other potential files or directories not shown in images)
 
+Clone the repository:
+git clone https://github.com/your-username/docker_ros.git
+cd docker_ros
+(Replace your-username with the correct username.)
 
-## ⚡ Quick Start
+Build the Docker image:
+docker build -t ros_docker .
 
-### 1. Clone the repository
+Run a ROS container:
+docker run -it ros_docker bash
 
-```bash
-git clone https://github.com/ayushvbhardwaj/docker_ros.git
-cd docker_ros  
+Usage
 
-2. Build the Docker image
-docker build -t ros-ardupilot .
+Once inside the container, you can use ROS commands. Remember to source your ROS environment:
+source /opt/ros/<your_ros_distro>/setup.bash
+(Replace <your_ros_distro> with your ROS distribution, e.g., noetic.)
 
-3. Run the container
-docker run -it ros-ardupilot
-./run_dev.sh
+Customization
 
-🛠️ Requirements
-	•	Docker (latest)
-	•	Git
-	•	Linux/macOS (WSL2 or native)
+Modify the Dockerfile to install additional ROS packages or change the ROS distribution.
 
+Troubleshooting
 
-🧪 Running SITL Simulation (Optional)
-1. Inside the container:
-cd /root/ardupilot/ArduCopter
-sim_vehicle.py -v ArduCopter -f gazebo-iris --console --map
+Common issues include Docker not running or not sourcing the ROS setup script inside the container.
 
-2.	Launch Gazebo with IQSim:
-roslaunch iq_sim some_world.launch
+License
+
+This project is licensed under the MIT License. (You might want to add a LICENSE file if you don't have one).
