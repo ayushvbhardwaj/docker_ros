@@ -6,6 +6,10 @@ Prerequisites
 
 You need Docker installed on your system.
 
+
+**Download Prebuilt image at: https://hub.docker.com/r/ayushisdockering/ros**
+
+
 Getting Started
 
 Directory Structure:
