@@ -7,8 +7,8 @@ Prerequisites
 You need Docker installed on your system.
 
 
-**Download Prebuilt image from https://hub.docker.com/r/ayushisdockering/ros or
-by using the command docker pull ayushisdockering/ros**
+**Download Prebuilt image from https://hub.docker.com/r/ayushisdockering/ros or**
+**by using the command docker pull ayushisdockering/ros**
 
 
 Getting Started
