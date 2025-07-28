@@ -37,7 +37,7 @@ docker_ros/
 ---
 
 ##Clone the repository:
-##git clone https://github.com/your-username/docker_ros.git
+##git clone https://github.com/ayushvbhardwaj/docker_ros.git
 ##cd docker_ros
 (Replace your-username with the correct username.)
 
